@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    >
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/f_homepage_toolbar"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:layout_below="@+id/search"
+                android:columnOrderPreserved="false"
+                android:padding="15dp"
+                android:layout_marginTop="65dp"
+                android:id="@+id/temperature"
+                android:useDefaultMargins="true"
+                android:rowCount="1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/tempicon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_temperature_foreground"/>
+                        <TextView
+                            android:id="@+id/temphead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature"
+                            android:layout_toRightOf="@+id/tempicon"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tempdata"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/temphead"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20dp"
+                            android:text="30 deg C"/>
+
+
+
+
+
+                        <ImageView
+                            android:id="@+id/humicon"
+                            android:layout_below="@+id/tempicon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_humidity_foreground"/>
+                        <TextView
+                            android:id="@+id/humhead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soil Moisture"
+                            android:layout_below="@+id/tempicon"
+                            android:layout_toRightOf="@+id/humicon"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/humhead"
+                            android:layout_below="@id/tempicon"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20dp"
+                            android:text="30%"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/storeicon"
+                            android:layout_below="@+id/humicon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_ph_foreground"/>
+                        <TextView
+                            android:id="@+id/storehead"
+                            android:layout_below="@+id/humicon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soil pH Level"
+                            android:layout_toRightOf="@+id/storeicon"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_below="@+id/humicon"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/storehead"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20dp"
+                            android:text="20%"/>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/alert1icon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/alert"/>
+                        <TextView
+                            android:id="@+id/alert1head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="pH is too low!"
+                            android:layout_toRightOf="@+id/alert1icon"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+                        <ImageView
+                            android:id="@+id/alert2icon"
+                            android:layout_below="@+id/alert1icon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/alert"/>
+                        <TextView
+                            android:id="@+id/alert2head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature is decreasing rapidly!"
+                            android:layout_below="@+id/alert1icon"
+                            android:layout_toRightOf="@+id/alert2icon"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/alert2head"
+                            android:layout_below="@id/alert1icon"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20dp"
+                            android:text="30%"/>
+
+
+
+
+                        <ImageView
+                            android:id="@+id/alert3icon"
+                            android:layout_below="@+id/alert2icon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/alert"/>
+
+                        <TextView
+                            android:id="@+id/alert3head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Moisture is high!"
+                            android:layout_below="@+id/alert2icon"
+                            android:layout_toRightOf="@+id/alert3icon"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:padding="15dp"
+                    android:layout_marginTop="40dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/sughead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Crop Suggestions"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:id="@+id/sug1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rice"
+                            android:layout_below="@+id/sughead"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            />
+                        <TextView
+                            android:id="@+id/sug2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Barley"
+                            android:layout_below="@+id/sug1"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            />
+                        <TextView
+                            android:id="@+id/sug3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Potato"
+                            android:layout_below="@+id/sug2"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            />
+
+
+
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <include layout="@layout/f_homepage_toolbar"
+                android:id="@+id/fertilizertoolbar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Warehouses Near You"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:layout_margin="10dp"
+                android:textStyle="italic"
+                android:textFontWeight="20"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:layout_marginTop="10dp"
+                android:useDefaultMargins="true"
+                android:columnOrderPreserved="false"
+                android:rowCount="5">
+
+
+                <!-- Row 1 -->
+                <!-- Column 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/warehouse1name"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hari Om Warehouse"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginTop="8dp"
+                            android:textFontWeight="600"/>
+                        <TextView
+                            android:id="@+id/warehouse1storage"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="1000kg Storage available"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse1name"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse1location"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="1/267 Vikrant Khand Gomtinagar"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse1storage"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse1distance"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="5 kms"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse1location"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse1phone"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="8840626029"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse1distance"
+                            android:textSize="15sp" />
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/warehouse1phone"
+                            android:numStars="5"
+                            android:theme="@style/RatingBar"
+                            android:rating="4"
+                            android:stepSize="1"
+                            style="?android:attr/ratingBarStyleSmall"
+                            />
+
+                        <ImageView
+                            android:id="@+id/plumberIv"
+                            android:layout_toRightOf="@+id/warehouse1name"
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/warehouseprofilepic"/>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/warehouse2name"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Central Warehouse"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginTop="8dp"
+                            android:textFontWeight="600"/>
+                        <TextView
+                            android:id="@+id/warehouse2storage"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="5000kg Storage available"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse2name"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse2location"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Main Market, Lucknow"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse2storage"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse2distance"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="10 kms"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse2location"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse2phone"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="9640622059"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse2distance"
+                            android:textSize="15sp" />
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/warehouse2phone"
+                            android:numStars="5"
+                            android:theme="@style/RatingBar"
+                            android:rating="2"
+                            android:stepSize="1"
+                            style="?android:attr/ratingBarStyleSmall"
+                            />
+
+                        <ImageView
+                            android:id="@+id/plumber2Iv"
+                            android:layout_toRightOf="@+id/warehouse2name"
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/warehouseprofilepic2"/>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/warehouse3name"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="A1 Warehouse"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginTop="8dp"
+                            android:textFontWeight="600"/>
+                        <TextView
+                            android:id="@+id/warehouse3storage"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="2000kg Storage available"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse3name"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse3location"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Patrakarpuram Lucknow"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse3storage"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse3distance"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="7 kms"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse3location"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse3phone"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="9453768543"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse3distance"
+                            android:textSize="15sp" />
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/warehouse3phone"
+                            android:numStars="5"
+                            android:theme="@style/RatingBar"
+                            android:rating="5"
+                            android:stepSize="1"
+                            style="?android:attr/ratingBarStyleSmall"
+                            />
+
+                        <ImageView
+                            android:id="@+id/plumber3Iv"
+                            android:layout_toRightOf="@+id/warehouse3name"
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/warehouseprofilepic3"/>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/warehouse4name"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Asian Warehouse"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginTop="8dp"
+                            android:textFontWeight="600"/>
+                        <TextView
+                            android:id="@+id/warehouse4storage"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="25000kg Storage available"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse4name"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse4location"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Charbagh Lucknow"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse4storage"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse4distance"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="15 kms"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse4location"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/warehouse4phone"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="7905289804"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#000000"
+                            android:layout_below="@+id/warehouse4distance"
+                            android:textSize="15sp" />
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/warehouse4phone"
+                            android:numStars="5"
+                            android:theme="@style/RatingBar"
+                            android:rating="4"
+                            android:stepSize="1"
+                            style="?android:attr/ratingBarStyleSmall"
+                            />
+
+                        <ImageView
+                            android:id="@+id/plumber4Iv"
+                            android:layout_toRightOf="@+id/warehouse4name"
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/warehouseprofilepic4"/>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

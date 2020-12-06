@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#a9a9a9</item>
+        <item name="colorControlActivated">#FFC107</item>
+    </style>
+
+</resources>

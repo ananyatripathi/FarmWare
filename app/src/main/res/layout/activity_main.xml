@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_width="match_parent">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/mainactivitytoolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:id="@+id/linear_layout" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/finalfulllogo"
+            />
+
+        <Button
+            android:id="@+id/psignup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="130dp"
+            android:textSize="18dp"
+            android:background="@drawable/corneredbutton"
+            android:text="Farmer's Portal"
+            android:textColor="#ffffff"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="0dp"
+            android:layout_height="10dp"/>
+
+        <Button
+            android:id="@+id/pregister"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:background="@drawable/corneredbutton"
+            android:text="Warehouse's Portal"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>

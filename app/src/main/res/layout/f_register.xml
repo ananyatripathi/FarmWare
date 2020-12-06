@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/logintoolbar"/>
+
+    <ImageView
+        android:id="@+id/loginlogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        android:src="@drawable/finalfulllogo"
+        android:layout_below="@+id/logintoolbar"
+        />
+
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:hint="Name"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:background="#11100F0F"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loginlogo"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+    <EditText
+        android:id="@+id/mobno"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/fname"
+        android:paddingLeft="10dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#11100F0F"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:hint="Mobile Number"
+        />
+
+    <Button
+        android:id="@+id/otpbtn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobno"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corneredbutton"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="Get OTP"
+        />
+
+    <EditText
+        android:id="@+id/enterotp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/otpbtn"
+        android:padding="10dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="#11100F0F"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:hint="Enter OTP"
+        />
+
+    <Button
+        android:id="@+id/verifyotpbtn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corneredbutton"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="Verify OTP"/>
+
+</RelativeLayout>
